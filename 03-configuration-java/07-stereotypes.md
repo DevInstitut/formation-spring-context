@@ -6,8 +6,7 @@ Spring propose "en standard" quelques stéréotypes.
 
 D'autres briques de Spring viennent compléter la liste de ces stereotypes.
 
-[ditaa]
-----
+```
                 +------------+
      +--------->+ @Component +<--------+
      |          +--------+---+         |
@@ -18,4 +17,4 @@ D'autres briques de Spring viennent compléter la liste de ces stereotypes.
       +---------+---+ +--+--------+
       | @Repository | |@Controller|
       +-------------+ +-----------+
-----
+```
