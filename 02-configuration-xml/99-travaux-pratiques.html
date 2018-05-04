@@ -1,0 +1,819 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TP #1 - Configuration XML · Formation Spring Context</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Rossi Oddet">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../03-configuration-java/" />
+    
+    
+    <link rel="prev" href="05-namespaces.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-introduction/">
+            
+                <a href="../01-introduction/">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-introduction/01-framework.html">
+            
+                <a href="../01-introduction/01-framework.html">
+            
+                    
+                    Spring Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-introduction/02-beans.html">
+            
+                <a href="../01-introduction/02-beans.html">
+            
+                    
+                    Beans
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-introduction/03-cycle-de-vie.html">
+            
+                <a href="../01-introduction/03-cycle-de-vie.html">
+            
+                    
+                    Cycle de vie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-introduction/04-context.html">
+            
+                <a href="../01-introduction/04-context.html">
+            
+                    
+                    Contexte Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Configuration XML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-bean.html">
+            
+                <a href="01-bean.html">
+            
+                    
+                    Configurer un bean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02-constructor-arg.html">
+            
+                <a href="02-constructor-arg.html">
+            
+                    
+                    constructor-arg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03-property.html">
+            
+                <a href="03-property.html">
+            
+                    
+                    property
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="04-scope.html">
+            
+                <a href="04-scope.html">
+            
+                    
+                    Portée
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="05-namespaces.html">
+            
+                <a href="05-namespaces.html">
+            
+                    
+                    Espaces de nommage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="99-travaux-pratiques.html">
+            
+                <a href="99-travaux-pratiques.html">
+            
+                    
+                    TP #1 - Configuration XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-configuration-java/">
+            
+                <a href="../03-configuration-java/">
+            
+                    
+                    Configuration Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-configuration-java/01-xml-scan.html">
+            
+                <a href="../03-configuration-java/01-xml-scan.html">
+            
+                    
+                    Activer le scan des packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-configuration-java/02-config-java.html">
+            
+                <a href="../03-configuration-java/02-config-java.html">
+            
+                    
+                    Configuration Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-configuration-java/03-injection-par-type.html">
+            
+                <a href="../03-configuration-java/03-injection-par-type.html">
+            
+                    
+                    Injecter une dépendance par type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-configuration-java/04-qualifier.html">
+            
+                <a href="../03-configuration-java/04-qualifier.html">
+            
+                    
+                    @Qualifier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-configuration-java/05-value.html">
+            
+                <a href="../03-configuration-java/05-value.html">
+            
+                    
+                    @Value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-configuration-java/06-JSR-330.html">
+            
+                <a href="../03-configuration-java/06-JSR-330.html">
+            
+                    
+                    JSR-330 & Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-configuration-java/07-stereotypes.html">
+            
+                <a href="../03-configuration-java/07-stereotypes.html">
+            
+                    
+                    Stéréotypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-configuration-java/08-constructeur-bean.html">
+            
+                <a href="../03-configuration-java/08-constructeur-bean.html">
+            
+                    
+                    Constructeur de bean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-configuration-java/09-pre-post.html">
+            
+                <a href="../03-configuration-java/09-pre-post.html">
+            
+                    
+                    Traitements pré-post-processeurs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03-configuration-java/99-travaux-pratiques.html">
+            
+                <a href="../03-configuration-java/99-travaux-pratiques.html">
+            
+                    
+                    TP #2 - Configuration Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >TP #1 - Configuration XML</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tp-1---configuration-xml">TP #1 - Configuration XML</h1>
+<h2 id="partie-1---prise-en-main-spring-core">Partie 1 - Prise en main Spring Core</h2>
+<h3 id="github">Github</h3>
+<ul>
+<li>R&#xE9;cup&#xE9;rer le projet : <em>sirh-gestion-paie.zip</em>.</li>
+<li>Faire une sauvegarde dans un d&#xE9;p&#xF4;t github : <em>sirh-gestion-paie</em>.</li>
+<li>Ouvrir STS (Spring Tools Suite).</li>
+<li>Importer le projet Maven <em>sirh-gestion-paie</em>.</li>
+</ul>
+<h3 id="int&#xE9;gration-du-bom-spring">Int&#xE9;gration du BOM Spring</h3>
+<p>Le projet Spring est constitu&#xE9; de nombreux sous-projets avec chacun son cycle de vie.
+Pour &#xE9;viter d&apos;utiliser deux sous-projets avec des versions incompatibles, le projet met &#xE0; disposition un BOM (Bill Of Materials).
+Il s&apos;agit d&apos;une d&#xE9;pendance Maven sp&#xE9;ciale &#xE0; int&#xE9;grer avec le scope <em>import</em>. </p>
+<ul>
+<li>Compl&#xE9;ter le projet dans la section <em>dependencyManagement</em> avec :</li>
+</ul>
+<p>[source,xml]</p>
+<pre><code>&lt;project ...&gt;
+
+    &lt;properties&gt;
+        ...
+    &lt;/properties&gt;
+
+    &lt;build&gt;
+        ...
+    &lt;/build&gt;
+    &lt;dependencyManagement&gt;
+        &lt;dependencies&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-framework-bom&lt;/artifactId&gt;
+                &lt;version&gt;4.3.8.RELEASE&lt;/version&gt;
+                &lt;type&gt;pom&lt;/type&gt;
+                &lt;scope&gt;import&lt;/scope&gt;
+            &lt;/dependency&gt;
+        &lt;/dependencies&gt;
+    &lt;/dependencyManagement&gt;
+&lt;/project&gt;
+</code></pre><h3 id="int&#xE9;gration-spring-context">Int&#xE9;gration Spring Context</h3>
+<p>Le projet <em>spring-context</em> contient les outils permettant de cr&#xE9;er le contexte Spring.</p>
+<ul>
+<li>Ajouter la d&#xE9;pendance vers <em>spring-context</em> :</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">...</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependencyManagement</span>&gt;</span>
+        ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencyManagement</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-context<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</code></pre>
+<h3 id="classe-paieutils">Classe PaieUtils</h3>
+<p>Dans le cadre de cette application, nous allons manipuler des types <em>java.math.BigDecimal</em>.
+Les nombres affich&#xE9;s auront toujours 2 chiffres apr&#xE8;s la virgule.</p>
+<p>Centralisons cette logique dans une classe <em>dev.paie.util.PaieUtils</em>.</p>
+<ul>
+<li>Cr&#xE9;er une classe <em>dev.paie.util.PaieUtils</em> avec le contenu suivant :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaieUtils</span> </span>{
+
+    <span class="hljs-comment">/**
+     * Formate un nombre sous la forme xx.xx (exemple : 2.00, 1.90). L&apos;arrondi
+     * se fait en mode &quot;UP&quot; =&gt; 1.904 devient 1.91
+     * 
+     * <span class="hljs-doctag">@param</span> decimal nombre &#xE0; formater
+     * <span class="hljs-doctag">@return</span> le nombre format&#xE9;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">formaterBigDecimal</span><span class="hljs-params">(BigDecimal decimal)</span> </span>{
+        DecimalFormat df = <span class="hljs-keyword">new</span> DecimalFormat();
+        <span class="hljs-comment">// forcer le s&#xE9;parateur &quot;.&quot; m&#xEA;me sur un poste en fran&#xE7;ais</span>
+        df.setDecimalFormatSymbols(DecimalFormatSymbols.getInstance(Locale.UK));
+        df.setMaximumFractionDigits(<span class="hljs-number">2</span>);
+        df.setRoundingMode(RoundingMode.UP);
+        df.setMinimumFractionDigits(<span class="hljs-number">2</span>);
+        df.setGroupingUsed(<span class="hljs-keyword">false</span>);
+        <span class="hljs-keyword">return</span> df.format(decimal);
+    }
+
+}
+</code></pre>
+<p>Nous allons &#xE0; pr&#xE9;sent cr&#xE9;er une classe de test unitaire pour valider le fonctionnement de la m&#xE9;thode <em>formaterBigDecimal</em>.</p>
+<ul>
+<li>Dans la partie <em>src/test/java</em>, cr&#xE9;er une classe <em>dev.paie.util.PaieUtilsTest</em> avec le contenu suivant :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaieUtilsTest</span> </span>{
+
+    <span class="hljs-keyword">private</span> PaieUtils paieUtils;
+
+    <span class="hljs-meta">@Before</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSetup</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// code ex&#xE9;cut&#xE9; avant chaque test</span>
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_formaterBigDecimal_entier_positif</span><span class="hljs-params">()</span> </span>{
+
+        String resultat = paieUtils.formaterBigDecimal(<span class="hljs-keyword">new</span> BigDecimal(<span class="hljs-string">&quot;2&quot;</span>));
+
+        assertThat(resultat, equalTo(<span class="hljs-string">&quot;2.00&quot;</span>));
+
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_formaterBigDecimal_trois_chiffres_apres_la_virgule</span><span class="hljs-params">()</span> </span>{
+
+        String resultat = paieUtils.formaterBigDecimal(<span class="hljs-keyword">new</span> BigDecimal(<span class="hljs-string">&quot;2.199&quot;</span>));
+
+        assertThat(resultat, equalTo(<span class="hljs-string">&quot;2.20&quot;</span>));
+
+    }
+
+    <span class="hljs-meta">@After</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onExit</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// code ex&#xE9;cut&#xE9; apr&#xE8;s chaque test</span>
+    }
+}
+</code></pre>
+<ul>
+<li>Ex&#xE9;cuter le test. Vous devriez avoir un <em>NullPointerException</em> du fait que <em>paieUtils</em> n&apos;est pas valoris&#xE9;.</li>
+</ul>
+<h3 id="premi&#xE8;re-configuration-spring">Premi&#xE8;re configuration Spring</h3>
+<p>Nous allons &#xE0; pr&#xE9;sent r&#xE9;cup&#xE9;rer une instance de <em>paieUtils</em> via une configuration Spring.</p>
+<ul>
+<li>Cr&#xE9;er un fichier de configuration Spring <em>src/main/resources/app-config.xml</em> (clic droit &gt; <em>Spring Bean Configuration File</em>).
+Ajouter le contenu suivant qui ajouter un bean appel&#xE9; <em>paieUtils</em>.</li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+    <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;paieUtils&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dev.paie.util.PaieUtils&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<p>Dans la classe de test <em>dev.paie.util.PaieUtilsTest</em> :</p>
+<ul>
+<li>Ajouter un champ <em>context</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">private</span> ClassPathXmlApplicationContext context;
+</code></pre>
+<ul>
+<li>Compl&#xE9;ter la m&#xE9;thode <em>onSetup</em> :</li>
+</ul>
+<pre><code class="lang-java">
+<span class="hljs-meta">@Before</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSetup</span><span class="hljs-params">()</span> </span>{
+    context = <span class="hljs-keyword">new</span> ClassPathXmlApplicationContext(<span class="hljs-string">&quot;app-config.xml&quot;</span>);
+    paieUtils = context.getBean(PaieUtils.class);
+}
+</code></pre>
+<ul>
+<li>Compl&#xE9;ter la m&#xE9;thode <em>onExit</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@After</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onExit</span><span class="hljs-params">()</span> </span>{
+    context.close();
+}
+</code></pre>
+<ul>
+<li><p>V&#xE9;rifier que le test est passant.</p>
+</li>
+<li><p>Ajouter un autre cas de test.</p>
+</li>
+</ul>
+<h2 id="partie-2---jeux-de-donn&#xE9;es">Partie 2 - Jeux de donn&#xE9;es</h2>
+<p>Construisons &#xE0; pr&#xE9;sent un jeux de donn&#xE9;es avec Spring.</p>
+<ul>
+<li>Visualiser les fichiers <em>cotisations-imposables.xml</em> et <em>cotisations-non-imposables.xml</em> :</li>
+</ul>
+<pre><code>/src
+    /main
+        /resources
+            cotisations-imposables.xml
+            cotisations-non-imposables.xml
+</code></pre><p>Ils contiennent les d&#xE9;finitions des cotisations.</p>
+<p>Cr&#xE9;ons &#xE0; pr&#xE9;sent un objet <em>bulletin1</em> qui repr&#xE9;senterait un jeux de donn&#xE9;es complet.</p>
+<p>image::images/entites.png[]</p>
+<ul>
+<li>Cr&#xE9;er un test unitaire <em>dev.paie.util.JeuxDeDonneesTest</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JeuxDeDonneesTest</span> </span>{
+
+    <span class="hljs-keyword">private</span> ClassPathXmlApplicationContext context;
+    <span class="hljs-keyword">private</span> BulletinSalaire bulletin1;
+
+    <span class="hljs-meta">@Before</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSetup</span><span class="hljs-params">()</span> </span>{
+        context = <span class="hljs-keyword">new</span> ClassPathXmlApplicationContext(<span class="hljs-string">&quot;jdd-config.xml&quot;</span>);
+        bulletin1 = context.getBean(<span class="hljs-string">&quot;bulletin1&quot;</span>, BulletinSalaire.class);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_primeExceptionnelle</span><span class="hljs-params">()</span> </span>{
+        assertThat(bulletin1.getPrimeExceptionnelle(), equalTo(<span class="hljs-keyword">new</span> BigDecimal(<span class="hljs-string">&quot;1000&quot;</span>)));
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_employe</span><span class="hljs-params">()</span> </span>{
+        assertThat(bulletin1.getRemunerationEmploye().getMatricule(), equalTo(<span class="hljs-string">&quot;M01&quot;</span>));
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_entreprise</span><span class="hljs-params">()</span> </span>{
+        assertThat(bulletin1.getRemunerationEmploye().getEntreprise().getSiret(), equalTo(<span class="hljs-string">&quot;80966785000022&quot;</span>));
+        assertThat(bulletin1.getRemunerationEmploye().getEntreprise().getDenomination(), equalTo(<span class="hljs-string">&quot;Dev Entreprise&quot;</span>));
+        assertThat(bulletin1.getRemunerationEmploye().getEntreprise().getCodeNaf(), equalTo(<span class="hljs-string">&quot;6202A&quot;</span>));
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_cotisationsNonImposables</span><span class="hljs-params">()</span> </span>{
+        List&lt;Cotisation&gt; cotisationsNonImposables = bulletin1.getRemunerationEmploye().getProfilRemuneration()
+                .getCotisationsNonImposables();
+        Stream.of(<span class="hljs-string">&quot;EP01&quot;</span>, <span class="hljs-string">&quot;EP02&quot;</span>, <span class="hljs-string">&quot;EP03&quot;</span>, <span class="hljs-string">&quot;EP04&quot;</span>, <span class="hljs-string">&quot;EP05&quot;</span>, <span class="hljs-string">&quot;EP06&quot;</span>, <span class="hljs-string">&quot;EP07&quot;</span>, <span class="hljs-string">&quot;EP12&quot;</span>, <span class="hljs-string">&quot;EP19&quot;</span>, <span class="hljs-string">&quot;EP20&quot;</span>, <span class="hljs-string">&quot;EPR1&quot;</span>, <span class="hljs-string">&quot;E900&quot;</span>,
+                <span class="hljs-string">&quot;EP28&quot;</span>, <span class="hljs-string">&quot;EP37&quot;</span>)
+                .forEach(code -&gt; assertTrue(<span class="hljs-string">&quot;verification code &quot;</span> + code,
+                        cotisationsNonImposables.stream().filter(c -&gt; c.getCode().equals(code)).findAny().isPresent()));
+
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_cotisationImposables</span><span class="hljs-params">()</span> </span>{
+        List&lt;Cotisation&gt; cotisationsImposables = bulletin1.getRemunerationEmploye().getProfilRemuneration()
+                .getCotisationsImposables();
+        Stream.of(<span class="hljs-string">&quot;SP01&quot;</span>, <span class="hljs-string">&quot;SP02&quot;</span>)
+                .forEach(code -&gt; assertTrue(<span class="hljs-string">&quot;verification code &quot;</span> + code,
+                        cotisationsImposables.stream().filter(c -&gt; c.getCode().equals(code)).findAny().isPresent()));
+
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_grade</span><span class="hljs-params">()</span> </span>{
+        assertThat(bulletin1.getRemunerationEmploye().getGrade().getNbHeuresBase(), equalTo(<span class="hljs-keyword">new</span> BigDecimal(<span class="hljs-string">&quot;151.67&quot;</span>)));
+        assertThat(bulletin1.getRemunerationEmploye().getGrade().getTauxBase(), equalTo(<span class="hljs-keyword">new</span> BigDecimal(<span class="hljs-string">&quot;11.0984&quot;</span>)));
+    }
+
+    <span class="hljs-meta">@After</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onExit</span><span class="hljs-params">()</span> </span>{
+        context.close();
+    }
+
+}
+</code></pre>
+<ul>
+<li>Cr&#xE9;er un fichier <em>jdd-config.xml</em> qui permet de rendre le test passant.</li>
+</ul>
+<p>Quelques indications :</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- exemple de valorisation de liste --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;profil1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dev.paie.entite.ProfilRemuneration&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;cotisationsNonImposables&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">util:list</span> <span class="hljs-attr">value-type</span>=<span class="hljs-string">&quot;dev.paie.entite.Cotisation&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ref</span> <span class="hljs-attr">bean</span>=<span class="hljs-string">&quot;ep01&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">util:list</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- importer une configuration dans une autre --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">import</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">&quot;classpath:cotisations-non-imposables.xml&quot;</span> /&gt;</span>
+</code></pre>
+<h2 id="assertj">AssertJ</h2>
+<ul>
+<li>Vous vous souvenez d&apos;<em>AssertJ</em> ? Bien s&#xFB;r que oui ! Remplacer les assertions des tests par des assertions <em>AssertJ</em>.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-namespaces.html" class="navigation navigation-prev " aria-label="Previous page: Espaces de nommage">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../03-configuration-java/" class="navigation navigation-next " aria-label="Next page: Configuration Java">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TP #1 - Configuration XML","level":"1.3.6","depth":2,"next":{"title":"Configuration Java","level":"1.4","depth":1,"path":"03-configuration-java/README.md","ref":"03-configuration-java/README.md","articles":[{"title":"Activer le scan des packages","level":"1.4.1","depth":2,"path":"03-configuration-java/01-xml-scan.md","ref":"03-configuration-java/01-xml-scan.md","articles":[]},{"title":"Configuration Java","level":"1.4.2","depth":2,"path":"03-configuration-java/02-config-java.md","ref":"03-configuration-java/02-config-java.md","articles":[]},{"title":"Injecter une dépendance par type","level":"1.4.3","depth":2,"path":"03-configuration-java/03-injection-par-type.md","ref":"03-configuration-java/03-injection-par-type.md","articles":[]},{"title":"@Qualifier","level":"1.4.4","depth":2,"path":"03-configuration-java/04-qualifier.md","ref":"03-configuration-java/04-qualifier.md","articles":[]},{"title":"@Value","level":"1.4.5","depth":2,"path":"03-configuration-java/05-value.md","ref":"03-configuration-java/05-value.md","articles":[]},{"title":"JSR-330 & Spring","level":"1.4.6","depth":2,"path":"03-configuration-java/06-JSR-330.md","ref":"03-configuration-java/06-JSR-330.md","articles":[]},{"title":"Stéréotypes","level":"1.4.7","depth":2,"path":"03-configuration-java/07-stereotypes.md","ref":"03-configuration-java/07-stereotypes.md","articles":[]},{"title":"Constructeur de bean","level":"1.4.8","depth":2,"path":"03-configuration-java/08-constructeur-bean.md","ref":"03-configuration-java/08-constructeur-bean.md","articles":[]},{"title":"Traitements pré-post-processeurs","level":"1.4.9","depth":2,"path":"03-configuration-java/09-pre-post.md","ref":"03-configuration-java/09-pre-post.md","articles":[]},{"title":"TP #2 - Configuration Java","level":"1.4.10","depth":2,"path":"03-configuration-java/99-travaux-pratiques.md","ref":"03-configuration-java/99-travaux-pratiques.md","articles":[]}]},"previous":{"title":"Espaces de nommage","level":"1.3.5","depth":2,"path":"02-configuration-xml/05-namespaces.md","ref":"02-configuration-xml/05-namespaces.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-spring-context","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Context","gitbook":"*"},"file":{"path":"02-configuration-xml/99-travaux-pratiques.md","mtime":"2018-05-04T15:30:20.043Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-04T15:33:47.471Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-edit/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

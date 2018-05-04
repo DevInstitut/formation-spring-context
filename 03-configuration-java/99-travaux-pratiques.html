@@ -1,0 +1,655 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TP #2 - Configuration Java · Formation Spring Context</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Rossi Oddet">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="09-pre-post.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-introduction/">
+            
+                <a href="../01-introduction/">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-introduction/01-framework.html">
+            
+                <a href="../01-introduction/01-framework.html">
+            
+                    
+                    Spring Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-introduction/02-beans.html">
+            
+                <a href="../01-introduction/02-beans.html">
+            
+                    
+                    Beans
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-introduction/03-cycle-de-vie.html">
+            
+                <a href="../01-introduction/03-cycle-de-vie.html">
+            
+                    
+                    Cycle de vie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-introduction/04-context.html">
+            
+                <a href="../01-introduction/04-context.html">
+            
+                    
+                    Contexte Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02-configuration-xml/">
+            
+                <a href="../02-configuration-xml/">
+            
+                    
+                    Configuration XML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-configuration-xml/01-bean.html">
+            
+                <a href="../02-configuration-xml/01-bean.html">
+            
+                    
+                    Configurer un bean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-configuration-xml/02-constructor-arg.html">
+            
+                <a href="../02-configuration-xml/02-constructor-arg.html">
+            
+                    
+                    constructor-arg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-configuration-xml/03-property.html">
+            
+                <a href="../02-configuration-xml/03-property.html">
+            
+                    
+                    property
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-configuration-xml/04-scope.html">
+            
+                <a href="../02-configuration-xml/04-scope.html">
+            
+                    
+                    Portée
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-configuration-xml/05-namespaces.html">
+            
+                <a href="../02-configuration-xml/05-namespaces.html">
+            
+                    
+                    Espaces de nommage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../02-configuration-xml/99-travaux-pratiques.html">
+            
+                <a href="../02-configuration-xml/99-travaux-pratiques.html">
+            
+                    
+                    TP #1 - Configuration XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Configuration Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01-xml-scan.html">
+            
+                <a href="01-xml-scan.html">
+            
+                    
+                    Activer le scan des packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02-config-java.html">
+            
+                <a href="02-config-java.html">
+            
+                    
+                    Configuration Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="03-injection-par-type.html">
+            
+                <a href="03-injection-par-type.html">
+            
+                    
+                    Injecter une dépendance par type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="04-qualifier.html">
+            
+                <a href="04-qualifier.html">
+            
+                    
+                    @Qualifier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="05-value.html">
+            
+                <a href="05-value.html">
+            
+                    
+                    @Value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="06-JSR-330.html">
+            
+                <a href="06-JSR-330.html">
+            
+                    
+                    JSR-330 & Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="07-stereotypes.html">
+            
+                <a href="07-stereotypes.html">
+            
+                    
+                    Stéréotypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="08-constructeur-bean.html">
+            
+                <a href="08-constructeur-bean.html">
+            
+                    
+                    Constructeur de bean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="09-pre-post.html">
+            
+                <a href="09-pre-post.html">
+            
+                    
+                    Traitements pré-post-processeurs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.10" data-path="99-travaux-pratiques.html">
+            
+                <a href="99-travaux-pratiques.html">
+            
+                    
+                    TP #2 - Configuration Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >TP #2 - Configuration Java</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tp-2---configuration-java">TP #2 - Configuration Java</h1>
+<p>= Formation Spring - Core (Java)
+:source-highlighter: coderay
+:title-logo-image: image:images/diginamic/diginamic_logo.png[pdfwitdh=100vw]
+:author: (Auteur, Animateur) =&gt; &apos;Rossi Oddet&apos;</p>
+<h2 id="partie-1---prise-en-main-spring-test">Partie 1 - Prise en main Spring Test</h2>
+<ul>
+<li>Ajouter la d&#xE9;pendance vers <em>spring-test</em> :</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Cr&#xE9;er une classe <em>dev.paie.entite.ResultatCalculRemuneration</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ResultatCalculRemuneration</span> </span>{
+
+    <span class="hljs-keyword">private</span> String salaireDeBase;
+    <span class="hljs-keyword">private</span> String salaireBrut;
+    <span class="hljs-keyword">private</span> String totalRetenueSalarial;
+    <span class="hljs-keyword">private</span> String totalCotisationsPatronales;
+    <span class="hljs-keyword">private</span> String netImposable;
+    <span class="hljs-keyword">private</span> String netAPayer;
+
+    <span class="hljs-comment">// TODO getters &amp; setters &#xE0; g&#xE9;n&#xE9;rer</span>
+}
+</code></pre>
+<ul>
+<li>Cr&#xE9;er une interface <em>dev.paie.service.CalculerRemunerationService</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">CalculerRemunerationService</span> </span>{
+    <span class="hljs-function">ResultatCalculRemuneration <span class="hljs-title">calculer</span><span class="hljs-params">(BulletinSalaire bulletin)</span></span>;
+}
+</code></pre>
+<ul>
+<li>Cr&#xE9;er une impl&#xE9;mentation <em>dev.paie.service.CalculerRemunerationServiceSimple</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@Service</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CalculerRemunerationServiceSimple</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">CalculerRemunerationService</span> </span>{
+    ...
+}
+</code></pre>
+<ul>
+<li>Cr&#xE9;er une classe <em>dev.paie.config.ServicesConfig</em> de configuration pour les services de l&apos;application :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@ComponentScan</span>(<span class="hljs-string">&quot;dev.paie.service&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ServicesConfig</span> </span>{
+
+}
+</code></pre>
+<p>Cette configuration permet de rechercher des beans Spring dans le package <em>dev.paie.service</em>.</p>
+<ul>
+<li>Cr&#xE9;er une classe de test <em>dev.paie.service.CalculerRemunerationServiceSimpleTest</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-comment">// S&#xE9;lection des classes de configuration Spring &#xE0; utiliser lors du test</span>
+<span class="hljs-meta">@ContextConfiguration</span>(classes = { ServicesConfig.class })
+<span class="hljs-comment">// Configuration JUnit pour que Spring prenne la main sur le cycle de vie du test</span>
+<span class="hljs-meta">@RunWith</span>(SpringRunner.class)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CalculerRemunerationServiceSimpleTest</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span> <span class="hljs-keyword">private</span> CalculerRemunerationService remunerationService;
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_calculer</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// TODO remplacer null par un objet bulletin</span>
+        ResultatCalculRemuneration resultat = remunerationService.calculer(<span class="hljs-keyword">null</span>);
+        assertThat(resultat.getSalaireBrut(), equalTo(<span class="hljs-string">&quot;2683.30&quot;</span>));
+        assertThat(resultat.getTotalRetenueSalarial(), equalTo(<span class="hljs-string">&quot;517.08&quot;</span>));
+        assertThat(resultat.getTotalCotisationsPatronales(), equalTo(<span class="hljs-string">&quot;1096.13&quot;</span>));
+        assertThat(resultat.getNetImposable(), equalTo(<span class="hljs-string">&quot;2166.22&quot;</span>));
+        assertThat(resultat.getNetAPayer(), equalTo(<span class="hljs-string">&quot;2088.41&quot;</span>));
+    }
+}
+</code></pre>
+<ul>
+<li>Ex&#xE9;cuter la classe de test. V&#xE9;rifier que le service CalculerRemunerationService est bien inject&#xE9;.</li>
+</ul>
+<h2 id="partie-2---impl&#xE9;mentation-calculerremunerationservicesimple">Partie 2 - Impl&#xE9;mentation CalculerRemunerationServiceSimple</h2>
+<ul>
+<li><p>Compl&#xE9;ter la classe de test <em>CalculerRemunerationServiceSimpleTest</em> pour injecter un objet de type <em>BulletinSalaire</em> provenant du jeux de donn&#xE9;es existant.
+Utiliser cet objet lors de l&apos;appel &#xE0; la m&#xE9;thode <em>calculer</em>.</p>
+</li>
+<li><p>Impl&#xE9;menter le service comme suit pour que le test soit passant :</p>
+</li>
+</ul>
+<pre><code>SALAIRE_BASE = GRADE.NB_HEURES_BASE * GRADE.TAUX_BASE
+
+SALAIRE_BRUT = SALAIRE_BASE + PRIME_EXCEPTIONNELLE
+
+TOTAL_RETENUE_SALARIALE = SOMME(COTISATION_NON_IMPOSABLE.TAUX_SALARIAL*SALAIRE_BRUT)
+
+TOTAL_COTISATIONS_PATRONALES = SOMME(COTISATION_NON_IMPOSABLE.TAUX_PATRONAL*SALAIRE_BRUT)
+
+NET_IMPOSABLE = SALAIRE_BRUT - TOTAL_RETENUE_SALARIALE
+
+NET_A_PAYER = NET_IMPOSABLE - SOMME(COTISATION_IMPOSABLE.TAUX_SALARIAL*SALAIRE_BRUT)
+</code></pre><p>Indication:</p>
+<ul>
+<li>Exemple de r&#xE9;cup&#xE9;ration d&apos;une configuration XML</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-comment">// Marque un bean de configuration Spring</span>
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-comment">// Import de la configuration XML dans une configuration Java</span>
+<span class="hljs-meta">@ImportResource</span>(<span class="hljs-string">&quot;classpath:jdd-config.xml&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JeuxDeDonneesConfig</span> </span>{
+
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="09-pre-post.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Traitements pré-post-processeurs">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TP #2 - Configuration Java","level":"1.4.10","depth":2,"previous":{"title":"Traitements pré-post-processeurs","level":"1.4.9","depth":2,"path":"03-configuration-java/09-pre-post.md","ref":"03-configuration-java/09-pre-post.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-spring-context","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Context","gitbook":"*"},"file":{"path":"03-configuration-java/99-travaux-pratiques.md","mtime":"2018-05-04T15:30:20.047Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-04T15:33:47.471Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-edit/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
