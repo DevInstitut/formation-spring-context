@@ -1,10 +1,5 @@
 # TP #2 - Configuration Java
 
-= Formation Spring - Core (Java)
-:source-highlighter: coderay
-:title-logo-image: image:images/diginamic/diginamic_logo.png[pdfwitdh=100vw]
-:author: (Auteur, Animateur) => 'Rossi Oddet'
-
 ## Partie 1 - Prise en main Spring Test
 
 * Ajouter la dépendance vers _spring-test_ :
