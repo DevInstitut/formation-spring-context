@@ -465,17 +465,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="value">@Value</h1>
-<pre><code class="lang-java"><span class="hljs-meta">@Component</span>
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PizzaService</span> </span>{
-    <span class="hljs-meta">@Autowired</span>
-    <span class="hljs-keyword">private</span> PizzaRepository pizzaRepository;
+<p><code>@Value</code> sert &#xE0; injecter une valeur via un <em>setter</em> ou un champ.</p>
+<p>Il est notamment souvent utilis&#xE9; pour r&#xE9;cup&#xE9;rer des valeurs depuis un fichier de propri&#xE9;t&#xE9;.</p>
+<p>Exemple de fichier de propri&#xE9;t&#xE9; <code>app.properties</code> :</p>
+<pre><code class="lang-properties">jdbc.user=helene
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-meta">@PropertySource</span>(<span class="hljs-string">&quot;app.properties&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppConfig</span> </span>{
 
-    <span class="hljs-comment">// @Value d&#xE9;finit une valeur pour un bean.</span>
-    <span class="hljs-comment">// il est possible d&apos;utiliser une variable du contexte Spring</span>
     <span class="hljs-meta">@Value</span>(<span class="hljs-string">&quot;${jdbc.user}&quot;</span>)
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setUser</span><span class="hljs-params">(String user)</span> </span>{
-        <span class="hljs-keyword">this</span>.user = user;
-    }
+    <span class="hljs-keyword">private</span> String username;
+
 }
 </code></pre>
 
@@ -521,7 +521,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"@Value","level":"1.4.5","depth":2,"next":{"title":"JSR-330 & Spring","level":"1.4.6","depth":2,"path":"03-configuration-java/06-JSR-330.md","ref":"03-configuration-java/06-JSR-330.md","articles":[]},"previous":{"title":"@Qualifier","level":"1.4.4","depth":2,"path":"03-configuration-java/04-qualifier.md","ref":"03-configuration-java/04-qualifier.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-spring-context","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Context","gitbook":"*"},"file":{"path":"03-configuration-java/05-value.md","mtime":"2018-05-07T10:03:25.257Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-07T10:06:05.744Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"@Value","level":"1.4.5","depth":2,"next":{"title":"JSR-330 & Spring","level":"1.4.6","depth":2,"path":"03-configuration-java/06-JSR-330.md","ref":"03-configuration-java/06-JSR-330.md","articles":[]},"previous":{"title":"@Qualifier","level":"1.4.4","depth":2,"path":"03-configuration-java/04-qualifier.md","ref":"03-configuration-java/04-qualifier.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-spring-context","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Context","gitbook":"*"},"file":{"path":"03-configuration-java/05-value.md","mtime":"2018-05-07T10:20:51.137Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-07T10:23:59.498Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
