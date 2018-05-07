@@ -6,15 +6,12 @@ Spring propose "en standard" quelques stéréotypes.
 
 D'autres briques de Spring viennent compléter la liste de ces stereotypes.
 
-```
-                +------------+
-     +--------->+ @Component +<--------+
-     |          +--------+---+         |
-+----+----+     ^        ^     +-------+------+
-|@Service |     |        |     |@Configuration|
-+---------+     |        |     +--------------+
-                |        |
-      +---------+---+ +--+--------+
-      | @Repository | |@Controller|
-      +-------------+ +-----------+
-```
+![](images/stereotypes.png)
+
+
+* `@Component` : annotation de base d'un bean Spring.
+* `@Service` : service métier.
+* `@Repository` : accès aux données.
+* `@Configuration` : configuration de Spring.
+* `@Controller` : intéractions avec utilisateur de l'application.
+

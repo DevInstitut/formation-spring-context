@@ -1,17 +1,24 @@
 # @Value
 
+`@Value` sert à injecter une valeur via un *setter* ou un champ.
+
+Il est notamment souvent utilisé pour récupérer des valeurs depuis un fichier de propriété.
+
+Exemple de fichier de propriété `app.properties` :
+
+```properties
+jdbc.user=helene
+```
+
 
 ```java
-@Component
-public class PizzaService {
-    @Autowired
-    private PizzaRepository pizzaRepository;
-
-    // @Value définit une valeur pour un bean.
-    // il est possible d'utiliser une variable du contexte Spring
+@PropertySource("app.properties")
+public class AppConfig {
+    
     @Value("${jdbc.user}")
-    public void setUser(String user) {
-        this.user = user;
-    }
+    private String username;
+    
 }
+
+
 ```
