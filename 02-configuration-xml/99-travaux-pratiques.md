@@ -18,8 +18,8 @@ Il s'agit d'une dépendance Maven spéciale à intégrer avec le scope _import_.
 
 * Compléter le projet dans la section _dependencyManagement_ avec :
 
-[source,xml]
-```
+
+```xml
 <project ...>
 	
 	<properties>
