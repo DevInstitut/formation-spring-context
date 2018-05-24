@@ -5,10 +5,10 @@
 
 ### Github
 
-* Récupérer le projet : _sirh-gestion-paie.zip_.
-* Faire une sauvegarde dans un dépôt github : _sirh-gestion-paie_.
+* Créer un fork du projet `sirh-gestion-paie`.
+* Importer le projet sur votre poste.
 * Ouvrir STS (Spring Tools Suite).
-* Importer le projet Maven _sirh-gestion-paie_.
+* Importer le projet Maven `sirh-gestion-paie`.
 
 ### Intégration du BOM Spring
 
