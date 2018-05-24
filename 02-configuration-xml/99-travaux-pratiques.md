@@ -208,7 +208,7 @@ Ils contiennent les définitions des cotisations.
 
 Créons à présent un objet _bulletin1_ qui représenterait un jeux de données complet.
 
-image::images/entites.png[]
+![](images/entites.png)
 
 
 * Créer un test unitaire _dev.paie.util.JeuxDeDonneesTest_ :
